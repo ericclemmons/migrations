@@ -30,6 +30,9 @@ class HtmlSqlQueryUpTest extends \Doctrine\DBAL\Migrations\Tests\MigrationTestCa
         $params = array('driver' => 'pdo_sqlite', 'memory' => true);
         $this->connection = DriverManager::getConnection($params);
         $console = new ConsoleOutput();
+        foreach (array('p', 'ul', 'li') as $tag) {
+            $console->setStyle($tag);
+        }
         $this->outputWriter = new OutputWriter(function($message) use ($console) {
             $console->write($message);
         });

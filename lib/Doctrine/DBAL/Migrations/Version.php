@@ -236,7 +236,7 @@ class Version
                 if ($this->_sql) {
                     $count = count($this->_sql);
                     foreach ($this->_sql as $query) {
-                        $this->_outputWriter->write('     <comment>-></comment> ' . strip_tags($query));
+                        $this->_outputWriter->write('     <comment>-></comment> ' . $query);
                         $this->_connection->executeQuery($query);
                     }
 
@@ -250,7 +250,7 @@ class Version
                 }
             } else {
                 foreach ($this->_sql as $query) {
-                    $this->_outputWriter->write('     <comment>-></comment> ' . strip_tags($query));
+                    $this->_outputWriter->write('     <comment>-></comment> ' . $query);
                 }
             }
 
