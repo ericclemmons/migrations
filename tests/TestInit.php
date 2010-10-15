@@ -18,5 +18,6 @@ $classLoader->register();
 $classLoader = new ClassLoader('Doctrine\DBAL', __DIR__ . '/../lib/vendor/doctrine-dbal/lib');
 $classLoader->register();
 
-$classLoader = new ClassLoader('Symfony\Component\Yaml', __DIR__ . '/../lib/vendor');
+$classLoader = new ClassLoader('Symfony', __DIR__ . '/../lib/vendor');
 $classLoader->register();
+
